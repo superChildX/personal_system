@@ -39,6 +39,17 @@ build/
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+logs/
+
+# 本地文档（不提交到远程）
+design.md
+database_design.md
+快速导航.md
+README.md
+*.sh
+
 # Database
 *.sql
 backup/
