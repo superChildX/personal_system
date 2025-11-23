@@ -59,8 +59,6 @@ async def health_check():
     return {"status": "ok", "message": "系统运行正常"}
 
 
-# TODO: 导入并注册API路由
-# from .api.v1 import auth, users, profile, projects, notes, tasks, daily, goals, knowledge, experiences, contacts, ideas, dashboard
-# app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["认证"])
-# app.include_router(users.router, prefix=f"{settings.API_V1_STR}/users", tags=["用户管理"])
-# ...更多路由
+# 导入并注册API路由
+from .api.v1 import api_router
+app.include_router(api_router, prefix=settings.API_V1_STR)
